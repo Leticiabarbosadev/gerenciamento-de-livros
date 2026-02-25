@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+<h2>Histórico de Movimentações</h2>
+
+{% for e in emprestimos %}
+
+<p>
+📚 {{e.livro}}
+| 👤 {{e.usuario}}
+| 📅 Empréstimo: {{e.data_emprestimo}}
+
+{% if e.devolvido %}
+| 📅 Devolução: {{e.data_devolucao}}
+| <span style="color:green;">Devolvido</span>
+{% else %}
+| <span style="color:red;">Em andamento</span>
+{% endif %}
+
+</p>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

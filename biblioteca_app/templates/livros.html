@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+<h2>Cadastrar Livro</h2>
+
+<form method="POST">
+
+<input name="titulo" placeholder="Nome do livro" required>
+
+<input name="autor" placeholder="Autor" required>
+
+<input name="paginas"
+type="number"
+placeholder="Quantidade de páginas"
+required>
+
+<input name="quantidade"
+type="number"
+placeholder="Quantidade disponível"
+required>
+
+<button>Cadastrar</button>
+
+</form>
+
+</div>
+
+<div class="card">
+
+<h2>Livros cadastrados</h2>
+
+{% for livro in livros %}
+
+<p>
+📖 {{livro.titulo}}
+| Autor: {{livro.autor}}
+| {{livro.paginas}} páginas
+| Disponível:
+{{livro.quantidade - livro.emprestados}}
+</p>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

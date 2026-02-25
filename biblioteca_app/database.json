@@ -1,0 +1,28 @@
+{
+    "livros": [
+        {
+            "titulo": "Verity",
+            "autor": "Colleen Hoover",
+            "paginas": 320,
+            "quantidade": 5,
+            "emprestados": 0
+        }
+    ],
+    "usuarios": [
+        {
+            "nome": "Letícia",
+            "sobrenome": "Barbosa",
+            "cpf": "148.821.796-36",
+            "telefone": "34999624264"
+        }
+    ],
+    "emprestimos": [
+        {
+            "livro": "Verity",
+            "usuario": "Letícia Barbosa",
+            "data_emprestimo": "25/02/2026 16:17",
+            "devolvido": true,
+            "data_devolucao": "25/02/2026 16:18"
+        }
+    ]
+}

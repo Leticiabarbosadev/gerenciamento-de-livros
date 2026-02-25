@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+<h2>Devolução de Livro</h2>
+
+<form method="POST">
+
+<input name="livro"
+placeholder="Nome do livro"
+required>
+
+<input name="usuario"
+placeholder="Nome do usuário"
+required>
+
+<button>Devolver</button>
+
+</form>
+
+<p>{{ mensagem }}</p>
+
+</div>
+
+{% endblock %}
